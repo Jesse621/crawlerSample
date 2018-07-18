@@ -1,33 +1,4 @@
-package com.liepin.crawler.grab;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.commons.collections.CollectionUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.liepin.common.json.JsonUtil;
-import com.liepin.crawler.common.AliOssUtil;
-import com.liepin.crawler.common.AliOssUtil.FileDirType;
-import com.liepin.crawler.common.CU;
-import com.liepin.crawler.common.MQRedisClient;
-import com.liepin.crawler.process.DataBaseService;
 
 public class GrabSchoolMgr {
 	protected static Logger logger = LoggerFactory.getLogger(GrabSchoolMgr.class);
@@ -216,7 +187,7 @@ public class GrabSchoolMgr {
 				}
 				byte[] data = getImageStreamFile(url);
 				// new一个文件对象用来保存图片，默认保存当前工程根目录
-				String path = "/Users/jesse621/Liepin/schoolLogo/";
+				String path = "/Users/../schoolLogo/";
 				File imageFile = new File(path + name + ".jpg");
 				// 创建输出流
 				FileOutputStream outStream = new FileOutputStream(imageFile);
