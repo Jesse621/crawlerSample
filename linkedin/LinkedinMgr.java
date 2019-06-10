@@ -14,7 +14,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import com.ecust.util.MQRedisClient;
-import com.liepin.common.other.StringUtil;
 
 public class LinkedinMgr {
 
@@ -33,7 +32,7 @@ public class LinkedinMgr {
 
 	public static final String SCHOOL_E_LOGO = "SCHOOL_E_LOGO";
 
-	// MQRedisClient redisClient = new MQRedisClient("10.111.111.142", 6500);
+	
 	MQRedisClient redisClient = new MQRedisClient("127.0.0.1", 6379);
 
 	public void getLinkeUrl() throws Exception {
@@ -108,7 +107,7 @@ public class LinkedinMgr {
 
 	public String getPicUrl(String url) throws Exception {
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("user-data-dir=/Users/jesse621/Library/Application Support/Google/Chrome/Default");
+		options.addArguments("user-data-dir=/Users/*/Library/Application Support/Google/Chrome/Default");
 		WebDriver driver = new ChromeDriver(options);
 		// String url = "http://www.linkedin.com/school/nanjing-university/";
 		Cookie c5 = new Cookie("JSESSIONID", "\"ajax:9134082661032064420\"");
